@@ -17,12 +17,16 @@ import java.util.stream.Collectors;
 public class BookStore {
 
     final static int DECADE_ADDER = 10;
-    final static int PERCENT_ZERO = 0;
     final static int PERCENT_MULTIPLIER = 100;
 
     private final String bookStoreName;
     private final List<Novel> novelReferences;
 
+    /**
+     * Constructs a Bookstore.
+     *
+     * @param bookStoreName the name of the bookstore
+     */
     public BookStore(final String bookStoreName)
     {
         this.bookStoreName = bookStoreName;
@@ -229,11 +233,6 @@ public class BookStore {
     public int whichPercentWrittenBetween(final int firstYear,
                                           final int lastYear)
     {
-        if(novelReferences.isEmpty())
-        {
-            return PERCENT_ZERO;
-        }
-
         final int count;
         count = (int) novelReferences.stream()
                 .filter(novel -> novel.getYearPublished() >= firstYear &&
@@ -275,7 +274,8 @@ public class BookStore {
  *
  * @param args unused
  */
-public static void main(final String[] args){
+public static void main(final String[] args)
+{
 
     final BookStore bookstore;
     final Novel oldest;

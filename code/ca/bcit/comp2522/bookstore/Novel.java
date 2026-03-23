@@ -33,33 +33,6 @@ public class Novel {
     }
 
     /**
-     * Gets the title of the novel.
-     * @return title of the novel
-     */
-    public String getTitle()
-    {
-        return title;
-    }
-
-    /**
-     * Gets the author name of the novel
-     * @return novel's author's name
-     */
-    public String getAuthorName()
-    {
-        return authorName;
-    }
-
-    /**
-     * Gets the publication year of the novel.
-     * @return novel's publication year
-     */
-    public int getYearPublished()
-    {
-        return yearPublished;
-    }
-
-    /**
      * Validates title of novel.
      *
      * @param title the novel's title
@@ -102,9 +75,39 @@ public class Novel {
         if(year < MIN_PUBLICATION_YEAR ||
                 year > MAX_PUBLICATION_YEAR)
         {
-            throw new IllegalArgumentException("Invalid year, year must be between 1900 and 2010.");
+            throw new IllegalArgumentException("Invalid year, year must be between MIN_PUBLICATION_YEAR and MAX_PUBLICATION_YEAR.");
         }
         return year;
+    }
+
+    /**
+     * Gets the title of the novel.
+     * 
+     * @return title of the novel
+     */
+    public String getTitle()
+    {
+        return title;
+    }
+
+    /**
+     * Gets the author name of the novel.
+     *
+     * @return novel's author's name
+     */
+    public String getAuthorName()
+    {
+        return authorName;
+    }
+
+    /**
+     * Gets the publication year of the novel.
+     *
+     * @return novel's publication year
+     */
+    public int getYearPublished()
+    {
+        return yearPublished;
     }
 
     @Override

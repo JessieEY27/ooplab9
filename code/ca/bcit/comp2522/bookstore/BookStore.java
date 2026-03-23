@@ -252,11 +252,6 @@ public class BookStore {
      */
     public Novel getOldestBook()
     {
-        if(novelReferences.isEmpty())
-        {
-            return null;
-        }
-
         return novelReferences.stream()
                 .min(Comparator.comparingInt(Novel::getYearPublished))
                 .orElse(null);

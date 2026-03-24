@@ -12,9 +12,11 @@ import java.util.stream.Collectors;
  *  @author Jessie Yuen
  *  @author Faida Espiritu
  *  @author India Murgatroyd
+ *
  * @version 1.0
  */
-public class BookStore {
+public class BookStore
+{
 
     final static int DECADE_ADDER = 10;
     final static int PERCENT_MULTIPLIER = 100;

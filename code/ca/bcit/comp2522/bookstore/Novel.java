@@ -6,9 +6,11 @@ package ca.bcit.comp2522.bookstore;
  * @author Jessie Yuen
  * @author Faida Espiritu
  * @author India Murgatroyd
+ *
  * @version 1
  */
-public class Novel {
+public class Novel
+{
 
     private static final int MIN_PUBLICATION_YEAR = 1900;
     private static final int MAX_PUBLICATION_YEAR = 2010;
@@ -82,7 +84,7 @@ public class Novel {
 
     /**
      * Gets the title of the novel.
-     * 
+     *
      * @return title of the novel
      */
     public String getTitle()
